@@ -31,14 +31,15 @@
       }
 
       #currentInfo {
-        width: 270px;
+        width: 90%;
         position: absolute;
-        left: 20px;
-        top: 63px;
+        padding: 20px;
+        /* float: right;         */
+        top: 92%;
 
         background-color: rgba(0,0,0,0.2);
 
-        border-top: 1px solid rgba(255,255,255,0.4);
+        /* border-top: 1px solid rgba(255,255,255,0.4); */
         padding: 10px;
       }
 
@@ -72,8 +73,9 @@
         height: 30px;
         text-align: center;
         float: left;
-        width: 90px;
+        width: 70px;
         color: rgba(255, 255, 255, 0.4);
+        /* border: #000000; */
 
         cursor: pointer;
         -webkit-transition: all 0.1s ease-out;
@@ -81,7 +83,7 @@
 
       .year:hover, .year.active {
         font-size: 23px;
-        color: #fff;
+        color:#a1e2b5;
       }
 
       #ce span {
@@ -89,15 +91,38 @@
       }
 
       #ce {
-        width: 107px;
-        height: 55px;
+        width: 120px;
+        height: 105px;
         display: block;
         position: absolute;
-        bottom: 15px;
-        left: 20px;
-        background: url(/globe/ce.png);
+        top: 17px;
+        right: 17px;
+        filter: drop-shadow(1.5px 1px 1.5px white);
       }
 
+      .btn-group{
+        position:absolute;
+        margin-top: 200px;
+        margin-left: 20px;
+        
+        top: 30px;
+      }
+      .btn-group button {
+        padding-top:5px; 
+        background-color: rgba(71, 57, 57, 0.329);
+        border: rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        color: white;
+        padding: 1px 10px;
+        height: 35px;
+        width: 40px;
+        display: block;
+        align-content: center;
+      }
+
+      .btn-group button:hover {
+          background-color:rgba(8, 4, 4, 0.4);
+      }
 
     </style>
   </head>
@@ -105,23 +130,29 @@
 
   <div id="container"></div>
 
-  <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+  <div>
+    <a href="http://www.chromeexperiments.com/globe">
+      <img id="ce" src="nasa.png">
+    </a>
+  </div>
+
+  <div class="btn-group">
+    <button><img style="width: 25px;height: 25px;" src="tree1.png"></button>
+    <button><img style="width: 25px;height: 25px;" src="tree2.png"></button>
+    <button><img style="width: 25px;height: 25px;" src="tree3.png"></button>
   </div>
 
   <div id="currentInfo">
-    <span id="year1990" class="year">1990</span>
-    <span id="year1995" class="year">1995</span>
     <span id="year2000" class="year">2000</span>
+    <span id="year1990" class="year">2004</span>
+    <span id="year1995" class="year">2008</span>
+    <span id="year2000" class="year">2012</span>
+    <span id="year1990" class="year">2016</span>
   </div>
 
   <div id="title">
-    World Population
+    Affected Forest Cover
   </div>
-
-  <a id="ce" href="http://www.chromeexperiments.com/globe">
-    <span>This is a Chrome Experiment</span>
-  </a>
 
   <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
   <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
