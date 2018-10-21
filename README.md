@@ -24,3 +24,4 @@ A device that used ML to detect machinery such as chainsaw real time and the ale
   - Javascript
   - WebGL
   - Hosted on AWS
+  - Google Earth Engine
